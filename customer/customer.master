@@ -1,0 +1,199 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="customer.master.cs" Inherits="customer_customer" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>RANGE CASA</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <%--<script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>--%>
+    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="../assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="../assets/vendor/venobox/venobox.css" rel="stylesheet">
+    <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-Zg+eFcwgOFyOAeFLeK5WKwF9CEabI0wqgFWHC5Uj8INoVyI3Z6tz02MGqgDFb4M0/jEgcWEm4mPILQ3pQqMVyQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+    <!-- Template Main CSS File -->
+    <link href="../assets/css/style.css" rel="stylesheet">
+
+
+
+    <style>
+        .sticky {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+
+    <form id="form1" runat="server">
+
+
+        <div>
+
+            <!-- ======= Header ======= -->
+            <header id="header">
+                <div class="container-fluid">
+
+                    <div class="logo float-left">
+                        <h1 class="text-light"><a href="#"><span style="color: #000080">RANGE CASA</span></a></h1>
+                    </div>
+
+                    <nav class="nav-menu float-right d-none d-lg-block">
+
+                        <button class="navbar-toggler bg-primary ml-5" style="color: azure" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto">
+
+                                <li>
+                                    <asp:HyperLink ID="HyperLink3" ForeColor="black" runat="server" NavigateUrl="~/customer/view_cart.aspx">
+                                        Cart <span>
+                                            <asp:Label ID="qty" runat="server"></asp:Label></span>
+                                    </asp:HyperLink>
+                                </li>
+
+                                <li>
+                                    <asp:HyperLink ID="btnlogin" ForeColor="black" runat="server" NavigateUrl="~/customer/login.aspx">Login</asp:HyperLink>
+
+                                </li>
+
+
+                                <li>
+                                    <asp:HyperLink ID="btnreg" ForeColor="black" runat="server" NavigateUrl="~/customer/registration.aspx">Registration</asp:HyperLink>
+                                </li>
+
+
+                                <li>
+                                    <asp:HyperLink ID="btnlogout" ForeColor="black" runat="server" NavigateUrl="~/customer/logout.aspx"><span id="uname" runat="server"></span>/ Logout</asp:HyperLink>
+                                </li>
+
+
+                                <li>
+                                    <asp:HyperLink ID="btnadminlogin" ForeColor="black" runat="server" NavigateUrl="../admin/adminlogin.aspx">Admin Login</asp:HyperLink>
+
+                                </li>
+
+
+
+                            </ul>
+                        </div>
+
+                    </nav>
+                </div>
+
+
+
+
+
+                <!-- Uncomment below if you prefer to use an image logo -->
+                <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+
+                <div class="d-flex">
+                    <ul class="navbar-nav mr-auto">
+                        <div class="d-flex m-sm-3">
+
+                            <li class="nav-item active">
+                                <asp:HyperLink ID="HyperLink1" Font-Size="10" NavigateUrl="~/customer/index.aspx" runat="server">Home</asp:HyperLink>
+                            </li>
+
+
+                            <li class="nav-item ml-4">
+                                <asp:HyperLink ID="HyperLink4" Font-Size="10" NavigateUrl="~/customer/View_product.aspx" runat="server">View products</asp:HyperLink>
+                            </li>
+
+
+                            <li class="nav-item ml-4">
+                                <asp:HyperLink ID="HyperLink2" Font-Size="10" NavigateUrl="~/customer/contactus.aspx" runat="server">Contact Us</asp:HyperLink>
+                            </li>
+
+
+                            <li class="ml-4">
+                                <asp:HyperLink ID="btnohistory" Font-Size="10" NavigateUrl="~/customer/order_history.aspx" runat="server">Order History</asp:HyperLink></li>
+                        </div>
+
+                    </ul>
+                    <!-- Inside the nav-menu -->
+                    
+            </header>
+        </div>
+
+        <!-- .nav-menu -->
+
+
+        <!-- End Header -->
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+
+        <!-- ======= Footer ======= -->
+        <footer id="footer" style="width: 100%; background-color: #000080;">
+
+            <div class="container">
+                <div class="copyright">
+                    &copy; Copyright <strong><span>RANGE CASA</span></strong>. All Rights Reserved
+                </div>
+                <div class="credits">
+                    <!-- All the links in the footer should remain intact. -->
+                    <!-- You can delete the links only if you purchased the pro version. -->
+                    <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                    <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/mamba-one-page-bootstrap-template-free/ -->
+                    Designed by <a href="#">Vinesh Mistry</a>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer -->
+
+        <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+
+    </form>
+
+    <!-- Vendor JS Files -->
+    <script src="../assets/vendor/jquery/jquery.min.js"></script>
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="../assets/vendor/php-email-form/validate.js"></script>
+    <script src="../assets/vendor/jquery-sticky/jquery.sticky.js"></script>
+    <script src="../assets/vendor/venobox/venobox.min.js"></script>
+    <script src="../assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+    <script src="../assets/vendor/counterup/counterup.min.js"></script>
+    <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="../assets/vendor/aos/aos.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
+
+
+<!-- Search Box 
+<div class="search-container">
+    <form>
+        <asp:TextBox ID="txtSearch" placeholder="Search..." CssClass="search-box"></asp:TextBox>
+        <asp:Button ID="btnSearch"  Text="Search" CssClass="search-btn" OnClick="btnSearch_Click" />
+    </form>
+</div> -->

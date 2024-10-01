@@ -1,0 +1,112 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="admin.master.cs" Inherits="admin_admin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Favicons -->
+    <link href="../assets/img/favicon.png" rel="icon">
+    <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="../assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="../assets/vendor/venobox/venobox.css" rel="stylesheet">
+    <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="../assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <!-- ======= Header ======= -->
+            <header id="header" >
+                <div class="container">
+
+                    <div class="logo float-left">
+                        <h1 class="text-light" "><a href="dashboard.aspx"><span>RANGE CASA(ADMIN)</span></a></h1>
+                        <!-- Uncomment below if you prefer to use an image logo -->
+                        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+                    </div>
+
+                    <nav class="nav-menu float-right d-none d-lg-block" >
+                        <ul>
+                            <li class="active"><a href="dashboard.aspx">Home</a></li>
+                            <li><a href="userquery.aspx">User Query</a></li>
+                            <%--<li><a href="addunit.aspx">Add Unit</a></li>--%>
+                            <li class="drop-down"><a style="cursor: pointer;">Master</a>
+                                <ul>
+                                    <li><a href="addunit.aspx">Add Unit</a></li>
+                                    <li><a href="addcategory.aspx">Add Category</a></li>
+                                    <li><a href="addproduct.aspx">Add Items</a></li>
+                                    <li><a href="addsupplier.aspx">Add Supplier</a></li>
+                                    <li><a href="addwarehouse.aspx">Add Warehouse</a></li>
+                                    <li><a href="gst_details.aspx">Add GST Details</a></li>
+                                    <li><a href="purchase_order.aspx">Purchase Order</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span>
+                                    <asp:HyperLink ID="btnlogout" runat="server" NavigateUrl="~/admin/logout.aspx">Logout</asp:HyperLink></span></li>
+
+                        </ul>
+                    </nav>
+                    <!-- .nav-menu -->
+
+                </div>
+            </header>
+            <!-- End Header -->
+
+            <!-- Master Page Body -->
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+            <!-- ======= Footer ======= -->
+            <footer id="footer" class="pt-2" style="background-color:white;">
+
+                <div class="container">
+                    <div class="copyright" style="color:black;">
+                        &copy; Copyright <strong><span>RANGE CASA</span></strong>. All Rights Reserved
+                    </div>
+                    <div class="credits" style="color:black;">
+                        Designed by <a href="#" style="color:black";>RANGE CASA</a>
+                    </div>
+                </div>
+            </footer>
+            <!-- End Footer -->
+
+            <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+        </div>
+    </form>
+
+
+    <!-- Vendor JS Files -->
+    <script src="../assets/vendor/jquery/jquery.min.js"></script>
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="../assets/vendor/php-email-form/validate.js"></script>
+    <script src="../assets/vendor/jquery-sticky/jquery.sticky.js"></script>
+    <script src="../assets/vendor/venobox/venobox.min.js"></script>
+    <script src="../assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+    <script src="../assets/vendor/counterup/counterup.min.js"></script>
+    <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="../assets/vendor/aos/aos.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
